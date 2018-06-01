@@ -1,0 +1,1326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>851</width>
+    <height>577</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Pipeline Simulator</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>99</y>
+      <width>221</width>
+      <height>401</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label_9">
+       <property name="text">
+        <string>Paste trace:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPlainTextEdit" name="traceText">
+       <property name="plainText">
+        <string>-1 -1 13
+-1 -1 13
+-1 5 45
+45 3 44
+-1 5 3
+-1 -1 0
+-1 -1 0
+-1 -1 12
+13 0 13
+-1 -1 -1
+-1 3 0
+0 0 44
+-1 -1 -1
+-1 0 7
+-1 7 44
+44 -1 0
+0 -1 44
+-1 -1 -1
+-1 -1 6
+-1 -1 44
+4 -1 4
+44 4 -1
+-1 -1 -1
+15 4 -1
+4 -1 4
+14 4 -1
+4 -1 4
+13 4 -1
+4 -1 4
+7 -1 13
+12 4 -1
+4 -1 4
+6 -1 12
+5 4 -1
+4 -1 4
+3 4 -1
+4 -1 4
+4 -1 4
+-1 7 44
+44 -1 0
+0 -1 44
+-1 -1 -1
+-1 7 5
+5 -1 44
+-1 -1 -1
+-1 -1 45
+-1 45 45
+5 45 44
+-1 -1 -1
+-1 -1 44
+-1 44 2
+2 2 44
+-1 -1 -1
+-1 2 12
+12 -1 12
+-1 -1 45
+-1 45 45
+5 45 44
+-1 -1 -1
+-1 -1 44
+-1 44 2
+2 2 44
+-1 -1 -1
+-1 2 0
+5 0 44
+-1 -1 -1
+-1 -1 45
+-1 45 45
+5 45 44
+-1 -1 -1
+-1 -1 44
+-1 44 2
+2 2 44
+-1 -1 -1
+-1 2 45
+45 -1 44
+44 2 -1
+5 -1 44
+12 -1 12
+-1 -1 -1
+-1 13 45
+45 -1 44
+-1 13 44
+44 -1 5
+-1 -1 -1
+12 -1 3
+-1 13 2
+3 3 44
+-1 -1 -1
+-1 3 0
+-1 0 45
+45 -1 44
+-1 -1 -1
+-1 3 3
+3 3 44
+-1 -1 -1
+4 -1 4
+-1 4 3
+4 -1 4
+-1 4 5
+4 -1 4
+-1 4 12
+4 -1 4
+-1 4 13
+4 -1 4
+-1 4 14
+4 -1 4
+-1 4 15
+4 -1 4
+-1 4 44
+4 -1 4
+44 -1 -1
+-1 -1 -1
+12 -1 12
+3 -1 3
+-1 5 45
+12 45 44
+-1 -1 -1
+-1 5 0
+-1 0 45
+45 -1 44
+-1 -1 -1
+-1 0 0
+-1 0 0
+0 -1 0
+0 -1 44
+-1 -1 -1
+-1 5 11
+11 11 44
+-1 -1 -1
+-1 5 1
+-1 5 -1
+1 5 -1
+-1 -1 -1
+-1 5 3
+-1 3 0
+0 0 44
+-1 -1 -1
+-1 0 7
+-1 7 45
+45 -1 44
+-1 -1 -1
+-1 7 1
+1 -1 44
+-1 -1 -1
+-1 -1 0
+-1 -1 -1
+0 1 0
+1 0 44
+-1 -1 -1
+1 -1 13
+-1 -1 45
+-1 45 45
+45 13 44
+0 5 -1
+-1 -1 -1
+-1 -1 44
+-1 44 2
+2 2 44
+-1 -1 -1
+-1 2 10
+10 10 44
+-1 -1 -1
+13 -1 13
+-1 5 45
+45 13 44
+-1 -1 -1
+-1 5 45
+45 -1 44
+44 5 -1
+-1 5 45
+45 -1 44
+44 5 -1
+-1 5 0
+-1 5 45
+45 0 44
+-1 -1 -1
+-1 5 1
+-1 -1 6
+-1 -1 -1
+-1 -1 -1
+-1 1 45
+45 -1 44
+-1 -1 -1
+-1 1 0
+0 0 44
+-1 -1 -1
+-1 0 45
+45 -1 44
+-1 -1 -1
+6 -1 6
+1 -1 1
+-1 5 45
+6 45 44
+-1 -1 -1
+-1 5 1
+-1 5 -1
+1 5 -1
+-1 -1 -1
+-1 5 2
+-1 2 0
+0 0 44
+-1 -1 -1
+-1 -1 44
+-1 44 9
+-1 0 12
+-1 2 14
+9 9 44
+-1 -1 -1
+-1 12 44
+44 -1 2
+2 -1 44
+-1 -1 -1
+-1 5 45
+45 -1 44
+-1 -1 -1
+-1 5 1
+-1 1 6
+6 6 44
+-1 -1 -1
+-1 -1 -1
+-1 12 44
+44 -1 0
+0 -1 44
+-1 -1 -1
+0 -1 44
+-1 -1 -1
+0 -1 44
+-1 -1 -1
+-1 -1 2
+12 -1 7
+-1 -1 44
+4 -1 4
+44 4 -1
+-1 -1 -1
+14 4 -1
+4 -1 4
+2 -1 14
+13 4 -1
+4 -1 4
+6 -1 13
+12 4 -1
+4 -1 4
+5 4 -1
+4 -1 4
+7 -1 5
+3 4 -1
+4 -1 4
+-1 7 44
+44 -1 0
+0 -1 44
+-1 -1 -1
+-1 7 3
+-1 -1 45
+-1 45 45
+3 45 44
+-1 -1 -1
+-1 -1 44
+-1 44 2
+2 2 44
+-1 -1 -1
+-1 2 45
+45 3 44
+-1 -1 -1
+13 13 44
+-1 -1 -1
+-1 13 1
+1 1 44
+-1 -1 -1
+-1 1 2
+-1 2 45
+45 -1 44
+-1 -1 -1
+-1 1 1
+1 1 44
+-1 -1 -1
+-1 1 2
+-1 2 45
+45 -1 44
+-1 -1 -1
+-1 2 44
+44 -1 0
+-1 5 45
+0 45 44
+-1 -1 -1
+-1 2 5
+-1 -1 45
+-1 45 45
+5 45 44
+-1 -1 -1
+5 -1 0
+0 -1 0
+0 5 0
+0 -1 0
+0 -1 0
+-1 0 2
+-1 0 12
+2 2 44
+-1 -1 -1
+-1 2 45
+45 5 44
+-1 -1 -1
+-1 -1 -1
+-1 2 12
+-1 -1 44
+5 44 -1
+-1 -1 44
+2 44 -1
+12 -1 0
+0 0 14
+14 -1 14
+14 -1 13
+-1 -1 44
+-1 44 44
+13 44 13
+-1 2 45
+45 5 44
+-1 -1 -1
+-1 -1 45
+-1 45 45
+3 45 44
+-1 -1 -1
+3 -1 0
+0 -1 0
+0 3 0
+0 -1 0
+0 -1 0
+-1 0 2
+-1 0 5
+2 2 44
+-1 -1 -1
+-1 2 45
+3 45 44
+-1 -1 -1
+-1 -1 44
+3 44 -1
+-1 -1 44
+2 44 -1
+12 2 -1
+-1 13 2
+-1 13 7
+2 -1 44
+-1 -1 -1
+3 -1 44
+-1 -1 -1
+2 -1 44
+2 -1 1
+3 -1 8
+-1 -1 -1
+-1 -1 44
+-1 44 10
+-1 -1 44
+-1 44 6
+8 10 1
+-1 1 44
+44 -1 0
+0 6 9
+-1 -1 45
+-1 45 45
+9 45 44
+-1 -1 -1
+-1 1 44
+44 -1 0
+0 6 0
+-1 -1 45
+-1 45 45
+0 45 44
+-1 -1 -1
+7 -1 44
+-1 -1 -1
+-1 -1 44
+-1 44 6
+7 -1 0
+0 -1 0
+-1 -1 -1
+0 6 2
+8 6 1
+-1 2 0
+0 1 -1
+-1 2 0
+0 0 44
+-1 -1 -1
+-1 -1 44
+-1 44 0
+14 0 44
+3 44 -1
+-1 -1 -1
+-1 -1 0
+3 2 -1
+7 1 -1
+-1 -1 -1
+-1 4 3
+4 -1 4
+-1 4 5
+4 -1 4
+-1 4 12
+4 -1 4
+-1 4 13
+4 -1 4
+-1 4 14
+4 -1 4
+-1 4 44
+4 -1 4
+44 -1 -1
+0 0 44
+-1 -1 -1
+12 -1 7
+-1 -1 44
+4 -1 4
+44 4 -1
+-1 -1 -1
+15 4 -1
+4 -1 4
+7 -1 15
+14 4 -1
+4 -1 4
+13 4 -1
+4 -1 4
+12 4 -1
+4 -1 4
+5 4 -1
+4 -1 4
+3 4 -1
+4 -1 4
+4 -1 4
+-1 7 45
+45 -1 44
+-1 -1 -1
+-1 15 45
+45 -1 44
+-1 -1 -1
+-1 15 3
+-1 -1 45
+-1 45 45
+3 45 44
+-1 -1 -1
+-1 -1 44
+-1 44 2
+2 2 44
+-1 -1 -1
+-1 2 5
+5 5 44
+-1 -1 -1
+4 -1 4
+-1 4 3
+4 -1 4
+-1 4 5
+4 -1 4
+-1 4 12
+4 -1 4
+-1 4 13
+4 -1 4
+-1 4 14
+4 -1 4
+-1 4 15
+4 -1 4
+-1 4 44
+4 -1 4
+44 -1 -1
+-1 12 45
+45 -1 44
+-1 -1 -1
+-1 12 3
+3 -1 44
+-1 -1 -1
+-1 -1 45
+-1 45 45
+3 45 44
+-1 -1 -1
+-1 -1 44
+-1 44 2
+2 2 44
+-1 -1 -1
+-1 2 0
+0 -1 0
+-1 5 2
+0 2 -1
+-1 -1 -1
+-1 14 45
+45 -1 44
+-1 -1 -1
+-1 5 0
+-1 12 44
+44 -1 1
+12 -1 7
+-1 0 2
+-1 0 6
+-1 -1 44
+4 -1 4
+44 4 -1
+-1 -1 -1
+15 4 -1
+4 -1 4
+2 -1 15
+14 4 -1
+4 -1 4
+6 -1 14
+13 4 -1
+4 -1 4
+12 4 -1
+4 -1 4
+5 4 -1
+4 -1 4
+7 -1 5
+3 4 -1
+4 -1 4
+4 -1 4
+-1 7 45
+45 -1 44
+1 4 -1
+-1 -1 -1
+-1 7 3
+-1 -1 45
+-1 45 45
+3 45 44
+-1 -1 -1
+-1 -1 44
+-1 44 2
+2 2 44
+-1 -1 -1
+-1 2 45
+45 3 44
+-1 -1 -1
+-1 5 45
+45 -1 44
+-1 -1 -1
+3 -1 44
+-1 -1 -1
+-1 -1 44
+-1 44 13
+13 13 44
+-1 -1 -1
+-1 13 0
+-1 -1 44
+0 44 -1
+5 13 -1
+-1 13 -1
+-1 5 44
+44 -1 0
+0 -1 44
+-1 -1 -1
+-1 -1 0
+-1 -1 -1
+0 13 -1
+5 -1 7
+-1 -1 44
+4 -1 4
+44 4 -1
+-1 -1 -1
+12 4 -1
+4 -1 4
+5 4 -1
+4 -1 4
+-1 -1 5
+3 4 -1
+4 -1 4
+-1 -1 3
+4 -1 4
+-1 4 12
+7 4 -1
+12 -1 7
+-1 -1 44
+4 -1 4
+44 4 -1
+-1 -1 -1
+7 -1 0
+-1 7 -1
+-1 7 -1
+-1 4 44
+4 -1 4
+44 -1 -1
+-1 4 7
+12 -1 2
+-1 -1 6
+-1 -1 44
+4 -1 4
+44 4 -1
+-1 -1 -1
+15 4 -1
+4 -1 4
+6 -1 15
+2 -1 6
+14 4 -1
+4 -1 4
+2 -1 14
+13 4 -1
+4 -1 4
+12 4 -1
+4 -1 4
+5 4 -1
+4 -1 4
+3 4 -1
+4 -1 4
+4 -1 4
+7 4 -1
+-1 -1 44
+4 -1 4
+44 4 -1
+15 -1 -1
+4 -1 4
+-1 7 0
+6 -1 2
+0 0 44
+-1 -1 -1
+-1 0 45
+45 -1 44
+-1 -1 -1
+-1 0 6
+2 -1 7
+-1 -1 44
+4 -1 4
+44 4 -1
+-1 -1 -1
+12 4 -1
+4 -1 4
+6 -1 12
+12 -1 12
+5 4 -1
+4 -1 4
+7 -1 5
+3 4 -1
+4 -1 4
+-1 7 7
+6 -1 3
+7 7 44
+-1 -1 -1
+-1 -1 44
+-1 44 6
+6 6 44
+-1 -1 -1
+-1 6 0
+-1 -1 44
+0 44 -1
+3 -1 2
+3 -1 3
+-1 -1 0
+2 -1 2
+3 -1 1
+-1 6 -1
+-1 6 -1
+2 -1 2
+0 1 0
+-1 5 45
+45 -1 44
+12 6 -1
+2 6 44
+0 44 -1
+-1 -1 -1
+-1 6 -1
+-1 6 -1
+6 5 -1
+-1 -1 -1
+6 5 -1
+12 5 -1
+-1 4 3
+4 -1 4
+-1 4 5
+4 -1 4
+-1 4 12
+4 -1 4
+-1 4 44
+4 -1 4
+44 -1 -1
+-1 -1 0
+4 -1 4
+-1 4 44
+4 -1 4
+44 -1 -1
+0 4 -1
+0 -1 0
+-1 -1 -1
+-1 4 11
+11 11 44
+-1 -1 -1
+-1 4 2
+-1 2 0
+0 0 44
+-1 -1 -1
+-1 0 44
+44 -1 0
+0 -1 1
+-1 0 44
+44 -1 0
+1 4 -1
+0 0 44
+-1 -1 -1
+0 -1 0
+-1 4 -1
+0 -1 0
+0 4 -1
+-1 4 3
+-1 4 1
+-1 4 2
+1 3 44
+44 -1 0
+0 -1 44
+-1 -1 -1
+0 -1 44
+-1 -1 -1
+0 -1 44
+-1 -1 -1
+-1 4 45
+45 -1 44
+44 4 -1
+-1 4 0
+-1 4 45
+45 0 44
+-1 -1 -1
+-1 4 3
+-1 4 1
+-1 4 2
+1 3 44
+44 -1 0
+0 -1 44
+-1 -1 -1
+0 -1 44
+-1 -1 -1
+0 -1 44
+-1 -1 -1
+-1 4 45
+45 -1 44
+44 4 -1
+-1 4 0
+-1 4 45
+45 0 44
+-1 -1 -1
+-1 -1 -1
+-1 4 0
+4 -1 4
+-1 4 3
+4 -1 4
+-1 4 5
+4 -1 4
+-1 4 12
+4 -1 4
+-1 4 13
+4 -1 4
+-1 4 14
+4 -1 4
+-1 4 15
+4 -1 4
+-1 4 44
+4 -1 4
+44 -1 -1
+-1 4 8
+8 8 44
+-1 -1 -1
+-1 -1 9
+9 8 6
+9 -1 10
+6 6 44
+-1 -1 -1
+-1 -1 7
+-1 -1 11
+-1 -1 -1
+7 -1 1
+11 -1 0
+0 1 0
+0 6 44
+-1 -1 -1
+0 -1 0
+6 0 6
+-1 8 0
+0 10 0
+0 -1 0
+1 0 2
+2 -1 44
+-1 -1 -1
+2 -1 44
+-1 -1 -1
+2 -1 44
+-1 -1 -1
+2 -1 44
+-1 -1 -1
+-1 2 0
+0 -1 44
+-1 -1 -1
+2 -1 44
+-1 -1 0
+-1 -1 -1
+3 0 3
+6 6 44
+-1 -1 -1
+9 -1 9
+9 -1 44
+-1 -1 -1
+9 8 6
+9 -1 10
+6 6 44
+-1 -1 -1
+9 -1 9
+9 -1 44
+-1 -1 -1
+-1 8 8
+8 8 44
+-1 -1 -1
+12 -1 7
+-1 -1 44
+4 -1 4
+44 4 -1
+-1 -1 -1
+-1 7 0
+0 0 44
+-1 -1 -1
+-1 -1 44
+-1 44 1
+-1 -1 -1
+-1 0 2
+1 0 -1
+2 2 44
+-1 -1 -1
+-1 -1 44
+0 44 -1
+-1 7 -1
+-1 7 -1
+-1 4 44
+4 -1 4
+44 -1 -1
+5 5 44
+-1 -1 -1
+4 -1 4
+3 -1 0
+-1 4 3
+4 -1 4
+-1 4 5
+4 -1 4
+-1 4 12
+4 -1 4
+-1 4 44
+4 -1 4
+44 -1 -1
+15 -1 2
+0 13 -1
+-1 13 -1
+-1 13 -1
+2 -1 6
+-1 13 -1
+-1 4 0
+-1 13 -1
+-1 13 -1
+6 13 -1
+0 13 -1
+-1 5 44
+44 -1 1
+-1 1 0
+0 -1 44
+-1 -1 -1
+1 -1 44
+-1 -1 -1
+1 -1 44
+-1 -1 -1
+1 -1 44
+-1 -1 -1
+-1 -1 -1
+1 -1 44
+-1 -1 -1
+-1 -1 -1
+1 -1 44
+-1 -1 -1
+1 -1 44
+-1 -1 -1
+-1 5 0
+0 -1 0
+0 -1 44
+-1 -1 -1
+-1 -1 44
+-1 44 8
+5 8 44
+-1 -1 -1
+-1 -1 44
+-1 44 7
+5 7 44
+-1 -1 -1
+-1 -1 44
+-1 44 11
+5 11 44
+-1 -1 -1
+-1 -1 44
+-1 44 9
+5 9 44
+-1 -1 -1
+-1 -1 44
+-1 44 10
+5 10 44
+-1 -1 -1
+1 -1 44
+-1 -1 -1
+1 -1 44
+-1 -1 1
+-1 -1 1
+-1 -1 -1
+6 6 44
+1 13 -1
+-1 -1 -1
+13 6 -1
+14 14 44
+2 -1 44
+13 44 -1
+-1 -1 -1
+-1 14 12
+-1 13 6
+-1 13 8
+-1 12 0
+-1 12 2
+0 6 44
+-1 -1 -1
+2 8 44
+-1 -1 -1
+8 -1 44
+-1 -1 -1
+2 -1 44
+-1 -1 -1
+0 6 44
+-1 -1 -1
+-1 -1 -1
+2 8 44
+-1 -1 -1
+-1 -1 -1
+8 -1 0
+0 2 0
+-1 -1 -1
+-1 -1 -1
+0 0 44
+-1 -1 -1
+8 -1 44
+-1 -1 -1
+6 -1 44
+-1 -1 -1
+12 -1 7
+-1 -1 -1
+-1 7 1
+1 1 44
+-1 -1 -1
+-1 1 0
+-1 1 2
+0 6 44
+-1 -1 -1
+8 2 44
+-1 -1 -1
+0 6 44
+-1 -1 -1
+8 2 44
+-1 -1 -1
+-1 -1 -1
+1 13 -1
+13 1 -1
+7 13 -1
+13 7 -1
+12 13 -1
+-1 13 45
+45 -1 44
+-1 -1 -1
+-1 5 45
+45 -1 44
+-1 -1 -1
+-1 5 3
+-1 -1 45
+-1 45 45
+3 45 44
+-1 -1 -1
+-1 -1 44
+-1 44 2
+2 2 44
+-1 -1 -1
+-1 2 44
+44 -1 0
+-1 -1 44
+-1 44 2
+0 0 0
+0 -1 0
+2 0 45
+45 -1 44
+-1 -1 -1
+-1 5 45
+45 -1 44
+-1 -1 -1
+-1 5 3
+-1 -1 45
+-1 45 45
+3 45 44
+-1 -1 -1
+-1 -1 44
+-1 44 2
+2 2 44
+-1 -1 -1
+-1 2 44
+44 -1 0
+-1 -1 44
+-1 44 6
+0 0 0
+0 -1 0
+6 0 45
+45 -1 44
+-1 -1 -1
+-1 5 3
+-1 -1 45
+-1 45 45
+3 45 44
+-1 5 44
+44 -1 14
+44 -1 14</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>90</y>
+      <width>351</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>Pipeline</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QSpinBox" name="registernumbers">
+       <property name="minimum">
+        <number>46</number>
+       </property>
+       <property name="maximum">
+        <number>1000</number>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="label_8">
+       <property name="text">
+        <string>Register size</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLineEdit" name="pipelineStages">
+       <property name="text">
+        <string>FI,DI,CO,FO,EI,WO</string>
+       </property>
+       <property name="placeholderText">
+        <string>comma separated: (FI,DI,CO,FO,EI,WO)</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>831</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>Pipeline Setup</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QSpinBox" name="operandstage">
+         <property name="maximum">
+          <number>5</number>
+         </property>
+         <property name="value">
+          <number>1</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Operand Stage</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="resultstage">
+         <property name="maximum">
+          <number>5</number>
+         </property>
+         <property name="value">
+          <number>5</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>Result Stage</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="startat">
+         <property name="maximum">
+          <number>1000</number>
+         </property>
+         <property name="value">
+          <number>1</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Instruction start</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="endat">
+         <property name="maximum">
+          <number>1000</number>
+         </property>
+         <property name="value">
+          <number>10</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Instruction end</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>7</x>
+      <y>510</y>
+      <width>831</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QPushButton" name="simulateButton">
+       <property name="text">
+        <string>Simulate</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="loadTrace">
+       <property name="text">
+        <string>Load example trace</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="helpButton">
+       <property name="text">
+        <string>Help</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="quitButton">
+       <property name="text">
+        <string>Quit</string>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>140</y>
+      <width>601</width>
+      <height>251</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <widget class="QLabel" name="label_10">
+       <property name="text">
+        <string>Output</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTextBrowser" name="textOutput">
+       <property name="font">
+        <font>
+         <family>Monospace</family>
+        </font>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>1060</x>
+      <y>140</y>
+      <width>160</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_3"/>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_4">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>410</y>
+      <width>601</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item>
+      <widget class="QTextBrowser" name="textOutput2"/>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+   <property name="toolTip">
+    <string>Quit</string>
+   </property>
+  </action>
+  <action name="actionSimulate">
+   <property name="text">
+    <string>Simulate</string>
+   </property>
+   <property name="toolTip">
+    <string>Simulate</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="text">
+    <string>Help</string>
+   </property>
+   <property name="toolTip">
+    <string>Help</string>
+   </property>
+  </action>
+  <action name="actionLoadTrace">
+   <property name="text">
+    <string>LoadTrace</string>
+   </property>
+   <property name="toolTip">
+    <string>LoadTrace</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
