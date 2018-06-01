@@ -13,6 +13,7 @@ __email__ = "altin.ukshini@gmail.com"
 __status__ = "Development"
 
 import os
+import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
@@ -442,7 +443,6 @@ class PipelineStatus():
         if self.pipelineStatus[0].idNum >= startChart and self.instructionEx <= stopChart and startChart > 0:
             for i in range(0, (self.instructionEx - startChart) + 1):
                 output += str("   ")
-                # sys.stdout.write("-- ")
 
             count = self.size
             while (count - 1) >= 0:
@@ -515,8 +515,6 @@ class RegisterStatus:
 
 
 if __name__ == "__main__":
-    import sys
-
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
