@@ -11,13 +11,13 @@ __version__ = "1.0"
 __maintainer__ = "Altin Ukshini"
 __email__ = "altin.ukshini@gmail.com"
 __status__ = "Development"
+__credits__ = "https://github.com/cvanoort/CPUPipelineSimulation"
+
 
 import os
 import sys
-import time
 import argparse
 from argparse import RawTextHelpFormatter
-from collections import defaultdict
 
 ########################################################
 # Config

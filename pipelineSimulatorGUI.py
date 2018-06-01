@@ -11,6 +11,7 @@ __version__ = "1.0"
 __maintainer__ = "Altin Ukshini"
 __email__ = "altin.ukshini@gmail.com"
 __status__ = "Development"
+__credits__ = "https://github.com/cvanoort/CPUPipelineSimulation"
 
 import os
 import sys
@@ -297,8 +298,8 @@ class Ui_MainWindow(object):
             # check and set stalls
             pipe.setStall(operandStage, regs.decode(pipe.getElement(operandStage)))
 
-            if pipe.printGraph(stageNum, startChart, endChart):
-                textOutput += str(pipe.printGraph(stageNum, startChart, endChart))
+            if pipe.printGraph(startChart, endChart):
+                textOutput += str(pipe.printGraph(startChart, endChart))
 
             stageNum += 1
 
@@ -315,8 +316,8 @@ class Ui_MainWindow(object):
                 # check and set stalls
                 pipe.setStall(operandStage, regs.decode(pipe.getElement(operandStage)))
 
-                if pipe.printGraph(stageNum, startChart, endChart):
-                    textOutput += str(pipe.printGraph(stageNum, startChart, endChart))
+                if pipe.printGraph(startChart, endChart):
+                    textOutput += str(pipe.printGraph(startChart, endChart))
 
                 stageNum += 1
                 stallNum += 1
@@ -334,8 +335,8 @@ class Ui_MainWindow(object):
             # check and set stalls
             pipe.setStall(operandStage, regs.decode(pipe.getElement(operandStage)))
 
-            if pipe.printGraph(stageNum, startChart, endChart):
-                textOutput += str(pipe.printGraph(stageNum, startChart, endChart))
+            if pipe.printGraph(startChart, endChart):
+                textOutput += str(pipe.printGraph(startChart, endChart))
 
             stageNum += 1
 
@@ -438,7 +439,7 @@ class PipelineStatus():
                 empty = bool(False)
         return empty
 
-    def printGraph(self, cycleNum, startChart, stopChart):
+    def printGraph(self, startChart, stopChart):
         output = str()
         if self.pipelineStatus[0].idNum >= startChart and self.instructionEx <= stopChart and startChart > 0:
             for i in range(0, (self.instructionEx - startChart) + 1):
