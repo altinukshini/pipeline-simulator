@@ -100,7 +100,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout.addWidget(self.label)
         self.resultstage = QtWidgets.QSpinBox(self.verticalLayoutWidget_2)
         self.resultstage.setMaximum(5)
-        self.resultstage.setProperty("value", 5)
+        self.resultstage.setProperty("value", 4)
         self.resultstage.setObjectName("resultstage")
         self.horizontalLayout.addWidget(self.resultstage)
         self.label_4 = QtWidgets.QLabel(self.verticalLayoutWidget_2)
@@ -206,8 +206,8 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Simulatori i Pipeline"))
-        self.pipelineStages.setText(_translate("MainWindow", "FI,DI,CO,FO,EI,WO"))
-        self.pipelineStages.setPlaceholderText(_translate("MainWindow", "comma separated: (FI,DI,CO,FO,EI,WO)"))
+        self.pipelineStages.setText(_translate("MainWindow", "IF,ID,EX,ME,WB"))
+        self.pipelineStages.setPlaceholderText(_translate("MainWindow", "comma separated: (IF,ID,EX,ME,WB)"))
         self.label_6.setText(_translate("MainWindow", "Pipeline"))
         self.label_9.setText(_translate("MainWindow", "Trace:"))
         self.label_8.setText(_translate("MainWindow", "Madhësia e regjistrit"))
@@ -261,7 +261,7 @@ class Ui_MainWindow(object):
 
         self.textOutput.setProperty("plainText", textOutput)
 
-        instructionNumber = 0
+        idNum = 0
         stageNum = 0
         stallNum = 0
 
@@ -279,7 +279,7 @@ class Ui_MainWindow(object):
                                             str(position + 1) + ". Shtyp butonin \"Ndihml\" për më shumë informacion.\n")
                 return
 
-            instructionNumber += 1
+            idNum += 1
 
             op1 = int(line.split(" ")[0])
             op2 = int(line.split(" ")[1])
@@ -293,7 +293,7 @@ class Ui_MainWindow(object):
             if pipe.getStatus(resultStage):
                 regs.writeBack(pipe.getElement(resultStage))
 
-            pipe.addInstruction(ProcessInfo(instructionNumber, op1, op2, result, False))
+            pipe.addInstruction(ProcessInfo(idNum, op1, op2, result, False))
 
             # check and set stalls
             pipe.setStall(operandStage, regs.decode(pipe.getElement(operandStage)))
@@ -344,12 +344,12 @@ class Ui_MainWindow(object):
             if pipe.getStall(operandStage):
                 stallNum += 1
 
-        noPipeline = len(pipelineStages) * instructionNumber
+        noPipeline = len(pipelineStages) * idNum
         speedup = round(100 * (float(noPipeline) / float(stageNum)), 3)
-        avgStalls = round(float(stallNum) / float(instructionNumber), 3)
+        avgStalls = round(float(stallNum) / float(idNum), 3)
 
         textOutput += str("\nAnaliza e simulimit: " +
-                          "\nNumri i instruksioneve të ekzekutuara: " + str(instructionNumber) +
+                          "\nNumri i instruksioneve të ekzekutuara: " + str(idNum) +
                           "\nNumri i fazava të ekzekutuara pa pipeline: " + str(noPipeline) +
                           "\nNumri i fazave në pritje: " + str(stallNum) +
                           "\nNumri i fazave në simulim të pipeline: " + str(stageNum) +
@@ -489,12 +489,10 @@ class RegisterStatus:
         stall = bool(False)
 
         if p.operand1 != -1:
-            if self.registerStatus[int(p.operand1)].nextWrite != 0 and self.registerStatus[
-                int(p.operand1)].nextWrite < p.idNum:
+            if self.registerStatus[int(p.operand1)].nextWrite != 0 and self.registerStatus[int(p.operand1)].nextWrite < p.idNum:
                 stall = bool(True)
         if p.operand2 != -1:
-            if self.registerStatus[int(p.operand2)].nextWrite != 0 and self.registerStatus[
-                int(p.operand2)].nextWrite < p.idNum:
+            if self.registerStatus[int(p.operand2)].nextWrite != 0 and self.registerStatus[int(p.operand2)].nextWrite < p.idNum:
                 stall = bool(True)
 
         if (not stall) and p.result != -1:
